@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cafeteria do Sabor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <button class="open-btn" onclick="abrirSidebar()">☰ Opções</button>
+    
+        <h1>Cafeteria do Sabor</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sidebar -->
+   <!-- Sidebar -->
+   <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="fecharSidebar()">×</a>
+    <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre Nós</a></li>
+        <li>
+            <a href="#menu">Cardápio</a>
+            <ul class="submenu">
+                <li><a href="#cafe">Cafés</a></li>
+                <li><a href="#bolo">Bolos</a></li>
+                <li><a href="#" onclick="mostrarBebidas()">Bebidas</a></li>
+                <!-- Seção de Bebidas -->
+<section id="bebidas">
+    <h2 class="titulo">Nossas Bebidas</h2>
+    <div class="bebidas-grid">
+        <div class="bebida-item">
+            <img src="imagenns/images.jpeg" alt="Suco Natural" class="bebida-imagem">
+            <h3>Suco Natural</h3>
+            <p>R$6,00</p>
+            <input type="number" id="quantidade-cafe" value="1" min="1" style="width: 50px;">
+            <button onclick="adicionarAoCarrinho('Suco Natural', 6, document.getElementById('quantidade-cafe').value)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="bebida-item">
+            <img src="imagenns/7891098040893.webp" alt="Chá Gelado" class="bebida-imagem">
+            <h3>Chá Gelado</h3>
+            <p>R$5,00</p>
+            <input type="number" id="quantidade-cafe" value="1" min="1" style="width: 50px;">
+            <button onclick="adicionarAoCarrinho('Chá Gelado', 5, document.getElementById('quantidade-cafe').value)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="bebida-item">
+            <img src="imagenns/1935-refrigerante-guarana-antarctica-lata-350ml.jpg" alt="Refrigerante" class="bebida-imagem">
+            <h3>Refrigerante</h3>
+            <p>R$4,00</p>
+            <input type="number" id="quantidade-cafe" value="1" min="1" style="width: 50px;">
+            <button onclick="adicionarAoCarrinho('Guarana Antarctica', 4, document.getElementById('quantidade-cafe').value)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="bebida-item">
+            <img src="imagenns/agua-mineral-sem-gas-crystal-500ml-1.webp" alt="Água Mineral" class="bebida-imagem">
+            <h3>Água Mineral</h3>
+            <p>R$3,00</p>
+            <input type="number" id="quantidade-cafe" value="1" min="1" style="width: 50px;">
+            <button onclick="adicionarAoCarrinho('Agua-mineral', 3, document.getElementById('quantidade-cafe').value)">Adicionar ao Carrinho</button>
+
+        </div>
+    </div>
+</section>
+     
+            </ul>
+        </li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="#promocoes">Promoções</a></li>
+        <li><a href="#social-media">Redes Sociais</a>
+            <ul class="submenu">
+                <li><a href="https://www.instagram.com/varellamv_/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/yourpage" target="_blank">Facebook</a></li>
+            </ul>
+        </li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#feedback">Deixe seu Feedback</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+    </ul>
+</div>
+
+
+    <script>
+        // Função para abrir a sidebar
+        function abrirSidebar() {
+            document.getElementById("sidebar").classList.add("open");
+        }
+
+        // Função para fechar a sidebar
+        function fecharSidebar() {
+            document.getElementById("sidebar").classList.remove("open");
+        }
+
+        // Aqui você pode adicionar outras funções que já tem no seu script
+    </script>
+
+    <section id="home" class="hero">
+        <h2 class="titulo">O melhor café da cidade</h2> 
+        <p class="subtitulo">Experimente sabores únicos e especiais!</p>  
+    </section>
+
+    <section id="about">
+        <h2 class="titulo">Sobre Nós</h2>
+        <p class="titulo">A Cafeteria do Sabor, localizada na Zona Norte do Rio de Janeiro, é um espaço acolhedor onde amigos se reúnem para apreciar cafés especiais e delícias caseiras, criando momentos inesquecíveis em um ambiente familiar.</p>
+    </section>
+
+    <!-- Adicionando a Seção da Galeria AQUI -->
+    <section id="galeria" class="galeria">
+        <h2 class="titulo">Galeria de Imagens</h2>
+        <div class="galeria-grid">
+            <img src="image1 (1).jpg" alt="Imagem 1" class="galeria-item">
+            <img src="image2.jpg" alt="Imagem 2" class="galeria-item">
+            <img src="image3.jpg" alt="Imagem 3" class="galeria-item">
+            <img src="image4.jpg" alt="Imagem 4" class="galeria-item">
+        </div>
+    </section>
+    
+    <section id="menu">
+        <h2 class="titulo">Nosso Cardápio</h2>
+        <div class="menu-grid">
+            <!-- Cardápio Aqui -->
+        </div>
+    </section>
+    
+
+    <section id="menu">
+        <h2 class="titulo">Carros Chefe</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="café.jpg" alt="Café Expresso" class="imagem-ajustada">
+                <p class="titulo">Café Expresso - R$5,00</p>
+                <input type="number" id="quantidade-cafe-expresso" value="1" min="1" style="width: 50px;">
+                <button onclick="adicionarAoCarrinho('Café Expresso', 5, document.getElementById('quantidade-cafe-expresso').value)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="premium_photo-1673545518947-ddf3240090b1.jpg" alt="Cappuccino" class="imagem-ajustada">
+                <p class="titulo">Cappuccino - R$8,00</p>
+                <input type="number" id="quantidade-cappuccino" value="1" min="1" style="width: 50px;">
+                <button onclick="adicionarAoCarrinho('Cappuccino', 8, document.getElementById('quantidade-cappuccino').value)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="bolo.jpg" alt="Bolo de Chocolate" class="imagem-ajustada">
+                <p class="titulo">Bolo De Chocolate/Fatia - R$12,00</p>
+                <input type="number" id="quantidade-bolo" value="1" min="1" style="width: 50px;">
+                <button onclick="adicionarAoCarrinho('Bolo de Chocolate', 12, document.getElementById('quantidade-bolo').value)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrinho" class="carrinho">
+        <h2 class="titulo">
+            <img src="istockphoto-1206806317-612x612.jpg" alt="Carrinho de Compras" class="carrinho-icon"> 
+        </h2>
+        <div id="itens-carrinho">
+            <p>Nenhum item no carrinho.</p>
+        </div>
+        <input type="text" id="nome-cliente" placeholder="Digite seu nome" required>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </section>
+    
+    
+    <script>
+ function finalizarCompra() {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio.");
+        return;
+    }
+
+    // Obtém o nome do cliente
+    var nomeCliente = document.getElementById("nome-cliente").value;
+    if (!nomeCliente) {
+        alert("Por favor, insira seu nome antes de finalizar a compra.");
+        return;
+    }
+
+    // Constrói a mensagem
+    var mensagem = "Pedido de " + nomeCliente + ":\n";
+    carrinho.forEach(function(item) {
+        var subtotal = item.preco * item.quantidade;
+        mensagem += item.quantidade + "x " + item.produto + " - R$" + subtotal.toFixed(2) + "\n";
+    });
+
+    // Calcula o total
+    var total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
+    mensagem += "Total: R$" + total.toFixed(2);
+
+    // Codifica a mensagem para a URL
+    var mensagemCodificada = encodeURIComponent(mensagem);
+    
+    // URL do WhatsApp com a mensagem
+    var urlWhatsApp = "https://api.whatsapp.com/send?phone=5521992954668&text=" + mensagemCodificada;
+
+    // Abre o WhatsApp
+    window.open(urlWhatsApp, "_blank");
+
+    // Limpa o carrinho após o envio
+    carrinho = [];
+    atualizarCarrinho(); // Atualiza a exibição do carrinho
+}
+
+    </script>
+    <script>
+
+function limparCarrinho() {
+    // Limpa o array do carrinho
+    carrinho = [];
+
+    // Atualiza a exibição do carrinho
+    atualizarCarrinho();
+}
+
+
+
+
+
+
+
+
+
+    </script>
+    
+    
+    
+
+    <section id="contact" class="secao-azul">
+        <h2>Entre em Contato</h2>
+        <p>victorvarellasanto@hotmail.com</p>
+        <p>Telefone: (21) 99295-4668</p>
+        <p>Siga-nos no Instagram: <a href="https://www.instagram.com/varellamv_/" target="_blank"><i class="fab fa-instagram"></i> @varellamv_</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cafeteria do Sabor.</p>
+    </footer>
+
+    <script>
+        var carrinho = [];
+
+        function adicionarAoCarrinho(produto, preco, quantidade) {
+            quantidade = parseInt(quantidade); // Converte a quantidade para um número inteiro
+            carrinho.push({ produto: produto, preco: preco, quantidade: quantidade });
+            alert(produto + " (Quantidade: " + quantidade + ") foi adicionado ao carrinho.");
+            atualizarCarrinho(); // Atualiza a exibição do carrinho
+        }
+
+        function atualizarCarrinho() {
+            var itensCarrinho = document.getElementById("itens-carrinho");
+            itensCarrinho.innerHTML = ""; // Limpa o conteúdo atual do carrinho
+
+            if (carrinho.length === 0) {
+                itensCarrinho.innerHTML = "<p>Nenhum item no carrinho.</p>";
+                return;
+            }
+
+            var total = 0; // Variável para calcular o total
+
+            carrinho.forEach(function(item) {
+                var subtotal = item.preco * item.quantidade; // Cálculo do subtotal
+                total += subtotal; // Adiciona ao total
+                itensCarrinho.innerHTML += "<p>" + item.quantidade + "x " + item.produto + " - R$" + subtotal.toFixed(2) + "</p>";
+            });
+
+            itensCarrinho.innerHTML += "<p><strong>Total: R$" + total.toFixed(2) + "</strong></p>"; // Exibe o total
+        }
+
+        function finalizarCompra() {
+            if (carrinho.length === 0) {
+                alert("Seu carrinho está vazio.");
+                return;
+            }
+            
+            alert("Compra finalizada! Obrigado pela sua preferência.");
+            carrinho = []; // Limpa o carrinho após a compra
+            atualizarCarrinho(); // Atualiza a exibição do carrinho
+        }
+    </script>
+</body>
+</html>
